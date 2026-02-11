@@ -1,0 +1,150 @@
+.tab-pane {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tab-pane.show.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Activities Bo'limi uchun Maxsus Dizayn */
+#nav-tab .nav-link {
+    border: none;
+    border-left: 4px solid transparent;
+    background: #f8f9fa;
+    margin-bottom: 15px;
+    padding: 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+    border-radius: 0 10px 10px 0;
+}
+
+#nav-tab .nav-link.active {
+    border-left-color: #f1c40f; /* Sariq rang */
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateX(10px);
+}
+
+#nav-tab .nav-link h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#nav-tab .nav-link span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Rasmlar panjarasi (Grid) */
+.tab-pane .img-fluid {
+    border-radius: 12px;
+    height: 200px; /* Rasmlar bir xil balandlikda bo'ladi */
+    width: 100%;
+    object-fit: cover; /* Rasmni cho'zmasdan sig'diradi */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab-pane .img-fluid:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Fonni biroz "shovqinli" va zamonaviy qilish */
+.section-padding {
+    background: linear-gradient(135deg, #ffffff 0%, #f3f4f7 100%);
+}
+
+/* Modal ichidagi rasm */
+.modal-content img {
+    border: 5px solid white;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+/* Umumiy bo'lim uchun zamonaviy fon */
+#activities {
+    background: radial-gradient(circle at top right, #fdfcfb 0%, #e2d1c3 100%); /* Yumshoq va iliq fon */
+    padding: 80px 0;
+    border-radius: 50px 50px 0 0;
+}
+
+/* Chap tomondagi tugmalar dizayni */
+#nav-tab .nav-link {
+    border: none;
+    background: rgba(255, 255, 255, 0.6); /* Shishasimon effekt */
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Aktiv tugma uchun neon effekt */
+#nav-tab .nav-link.active {
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(241, 196, 15, 0.3);
+    transform: scale(1.02) translateX(15px);
+}
+
+#nav-tab .nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background: linear-gradient(to bottom, #f1c40f, #e67e22); /* Oltin-sariq gradiyent */
+}
+
+/* Rasmlar uchun ramka va soya */
+.tab-pane .img-fluid {
+    border-radius: 20px;
+    border: 3px solid #fff; /* Oq ramka rasmga urg'u beradi */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    filter: grayscale(20%); /* Bir oz klassik ko'rinish */
+}
+
+.tab-pane .img-fluid:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border-color: #f1c40f; /* Hover bo'lganda ramka rangi o'zgaradi */
+}
+
+/* Matnlar stili */
+.tab-pane h5 {
+    color: #2c3e50;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+
+.tab-pane ul li {
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.tab-pane ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+#activities {
+    background-color: #f8fafc;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(241, 196, 15, 0.1) 0px, transparent 50%), 
+        radial-gradient(at 100% 100%, rgba(52, 152, 219, 0.1) 0px, transparent 50%);
+}
